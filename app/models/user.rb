@@ -80,10 +80,9 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
-  # Defines a proto-feed.
-  # See "Following users" for the full implementation.
+  # Return a user's status feed.
   def feed
-    Micropost.where "user_id =?", id
+    Micropost.where("user_id IN (?) OR user_id = ?", following_ids, id)
   end
 
   # Following a user.

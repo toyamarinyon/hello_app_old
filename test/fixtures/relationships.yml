@@ -2,12 +2,12 @@
 
 one:
   follower: michael
-  followed:  lana
+  followed: lana
 
 two:
   follower: michael
-  followed:  mallory
+  followed: mallory
 
-one:
+three:
   follower: archer
-  followed:  michael
+  followed: michael

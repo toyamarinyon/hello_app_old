@@ -93,7 +93,7 @@ class UserTest < ActiveSupport::TestCase
       assert michael.feed.include? post_following
     end
     # Posts from self
-    micael.microposts.each do |self_following|
+    michael.microposts.each do |self_following|
       assert michael.feed.include? self_following
     end
     # Posts from unfollowed user
